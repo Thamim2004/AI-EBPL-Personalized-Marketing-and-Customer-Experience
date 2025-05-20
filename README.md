@@ -1,83 +1,60 @@
-AI-EBPL: Personalized Marketing and Customer Experience
-AI-EBPL is an intelligent marketing solution designed to enhance customer engagement and conversion through real-time behavioral analysis and age-based profiling. By using computer vision and machine learning techniques, the system predicts the age group and emotional state of a user to deliver targeted advertisements and content—offering a smarter, more personalized customer experience.
+## **AI-Based Age Detection for Personalized Advertising Using Embedded Systems**
 
-1.Features:
+This project focuses on enhancing marketing strategies using computer vision to detect a user's age group through facial analysis. By processing real-time visual input using embedded systems, the solution delivers age-appropriate advertisements dynamically. The system can function offline, ensuring data privacy and fast inference suitable for kiosks, malls, and digital signage environments.
 
-Real-Time Age Detection
-Detects customer age groups from camera input using deep learning.
+---
 
-Emotion Recognition
-Analyzes customer emotions to fine-tune content delivery.
+### **📌 Features**
 
-Personalized Advertisement Display
-Dynamically selects and shows ads based on detected age/emotion.
+* **Facial age detection using computer vision**
+  (DeepFace, OpenCV, or similar frameworks)
 
-Embedded System Deployment
-Optimized for low-cost devices like Raspberry Pi or Jetson Nano.
+* **Real-time video/image feed analysis**
+  from live camera input
 
-Offline Processing
-Ensures data privacy by processing everything locally without cloud dependency.
+* **Dynamic ad delivery**
+  based on predicted age group (child, teen, adult, senior)
 
-Modular Design
-Easily extendable to include gender detection, product interest scoring, or face recognition.
+* **Offline and privacy-focused inference**
+  using on-device embedded processors
 
-2.Technology Used:
+* **Expandable architecture**
+  that supports emotion or gender-based personalization
 
-Python – Core programming language
+* **Scalable for multiple screens and ad campaigns**
+  in retail stores, airports, or public displays
 
-OpenCV – Image processing and real-time camera integration
+---
 
-TensorFlow / Keras – Deep learning models for age and emotion detection
+### **🛠 Technologies Used**
 
-DeepFace – Facial analysis for age, gender, and emotion
+* **Python** – Core programming
+* **OpenCV** – Image processing and camera access
+* **DeepFace / TensorFlow / Keras** – Age detection models
+* **NumPy / Pandas** – Data handling
+* **Flask / Streamlit** – (Optional) for user dashboard or interaction
+* **Raspberry Pi / Jetson Nano** – Embedded hardware deployment
 
-Flask / Streamlit (optional) – For UI integration
+---
 
-Raspberry Pi / Jetson Nano – Embedded hardware for on-edge inference
+### **📸 How It Works**
 
-3.How It Works:
+1. **Capture Input:**
+   Real-time image or video feed from a connected camera.
 
-Capture Input:
-The camera captures a real-time image of the person.
+2. **Detect Face and Age:**
+   Use a deep learning model to analyze the face and predict the age.
 
-Face Detection & Analysis:
-DeepFace is used to detect the face and analyze age, gender, and emotion.
+3. **Classify Age Group:**
+   Age is categorized into a group:
 
-Age Group Classification:
-The predicted age is mapped to predefined age brackets (e.g., child, teen, adult, senior).
+   * `Child (0–12)`
+   * `Teen (13–19)`
+   * `Adult (20–59)`
+   * `Senior (60+)`
 
-Emotion Detection:
-Dominant emotion is extracted from the face.
+4. **Display Ad Content:**
+   System maps the age group to an ad and displays it instantly.
 
-Ad Recommendation Engine:
-A decision tree maps age group + emotion to a specific marketing message or ad.
-
-Display Output:
-The ad is displayed instantly on a connected screen for the user.
-
-Data Collection
-Facial Images:
-The system processes real-time images using a webcam but does not store any facial data.
-
-Demographic Grouping:
-Age is estimated and categorized into groups:
-Child (0–12), Teen (13–19), Adult (20–59), Senior (60+)
-
-Emotion Metrics:
-Common emotions like happy, sad, angry, neutral are used to refine ad relevance.
-
-Privacy Assurance:
-All analysis is done locally. No user data is transmitted or stored, ensuring GDPR compliance and user trust.
-
-4.Usage:
-
-Clone the repository
-
-Install dependencies:
-pip install deepface opencv-python matplotlib
-
-Run main script:
-python ai_ebpl_ad_system.py
-
-Upload or use real-time camera for detection
-
+5. **Repeat in Real-Time:**
+   Continuously monitor and update content as people change.
